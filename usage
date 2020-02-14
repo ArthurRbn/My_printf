@@ -1,4 +1,4 @@
-This is a project where I had to recode the printf function in C.
+This is one of my firsts projects in C and I had to recode the printf function in C.
 usage :
 
 int my_printf(const char *format, ...)
