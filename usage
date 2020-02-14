@@ -1,0 +1,19 @@
+This is a project where I had to recode the printf function in C.
+usage :
+
+int my_printf(const char *format, ...)
+
+Call the function in a program with format followed by arguments to print
+and then compile your C file with the library created by the Makefile
+
+Example :
+
+int my_printf(const char *, ...)
+
+int main(void)
+{
+  char *str = "hello"
+  
+  my_printf("%s\n", str);
+  return (0);
+}
