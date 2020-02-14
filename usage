@@ -1,0 +1,29 @@
+This is one of my firsts projects in C and I had to recode the printf function in C.
+usage :
+
+int my_printf(const char *format, ...)
+
+Call the function in a program with format followed by arguments to print
+and then compile your C file with the library created by the Makefile.
+
+Example :
+
+int my_printf(const char *, ...)
+
+int main(void)
+{
+  char *str = "hello";
+  
+  my_printf("%s\n", str);
+  return (0);
+}
+
+%c : character
+%s : string
+%d : integer
+%o : integer given as parameter is converted to octal
+%x : integer given as parameter is converted to hexa
+%X : same a %x but printed with capital letters
+%b : prints unsigned integers given as parameter in a binary base
+%u : prints unsigned integers given as parameter
+%p : print pointer given as parameter
