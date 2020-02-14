@@ -4,7 +4,7 @@ usage :
 int my_printf(const char *format, ...)
 
 Call the function in a program with format followed by arguments to print
-and then compile your C file with the library created by the Makefile
+and then compile your C file with the library created by the Makefile.
 
 Example :
 
