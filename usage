@@ -8,7 +8,7 @@ and then compile your C file with the library created by the Makefile.
 
 Example :
 
-int my_printf(const char *, ...)
+int my_printf(const char *, ...);
 
 int main(void)
 {
