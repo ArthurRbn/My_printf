@@ -17,3 +17,13 @@ int main(void)
   my_printf("%s\n", str);
   return (0);
 }
+
+%c : character
+%s : string
+%d : integer
+%o : integer given as parameter is converted to octal
+%x : integer given as parameter is converted to hexa
+%X : same a %x but printed with capital letters
+%b : prints unsigned integers given as parameter in a binary base
+%u : prints unsigned integers given as parameter
+%p : print pointer given as parameter
