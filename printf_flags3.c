@@ -4,19 +4,19 @@
 ** File description:
 ** flags n3
 */
+
 #include <stdarg.h>
 #include <stdlib.h>
-#include "include/my.h"
 #include <stdio.h>
 #include <unistd.h>
+#include "include/my.h"
 
 char *prep_hex(char *src)
 {
     int lon = my_strlen(src);
     char *hex = malloc(sizeof(char) * (lon / 4 + 4));
-    for (int i = 0; i < (lon / 4 + 4); ++i) {
+    for (int i = 0; i < (lon / 4 + 4); ++i)
         hex[i] = '\0';
-    }
     return (hex);
 }
 
@@ -44,11 +44,11 @@ int letter(int i)
 
 void x_min(va_list arg)
 {
+    int k = 0;
+    int i = 0;
+    int tab[4] = {1, 2, 4, 8};
     char *bin = hexa_binary(arg);
     char *hex = prep_hex(bin);
-    int tab[4] = {1, 2, 4, 8};
-    int i = 0;
-    int k = 0;
 
     hex[(my_strlen(bin) / 4) + 1] = '\0';
     for (int p = 0; bin[p] != '\0';) {

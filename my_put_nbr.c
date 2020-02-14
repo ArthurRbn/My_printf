@@ -4,6 +4,7 @@
 ** File description:
 ** put number
 */
+
 #include "include/my.h"
 
 int my_put_nbr(int nb)

@@ -4,14 +4,14 @@
 ** File description:
 ** get number
 */
+#include <stdio.h>
 #include "include/my.h"
-#include "stdio.h"
 
 int my_getnbr(char *src)
 {
     long res = 0;
-    int lon = my_strlen(src);
     int mult = 1;
+    int lon = my_strlen(src);
 
     for (int i = lon - 1; i >= 0; --i) {
         if (src[i] == '-') {

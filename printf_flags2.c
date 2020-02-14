@@ -4,11 +4,12 @@
 ** File description:
 ** flags 2
 */
+
 #include <stdarg.h>
 #include <stdlib.h>
-#include "include/my.h"
 #include <stdio.h>
 #include <unistd.h>
+#include "include/my.h"
 
 void flag_big_s(va_list arg)
 {
@@ -28,6 +29,7 @@ void print_ascii(int c)
 {
     int i = c;
     int oct = octals(i);
+
     if (oct <= 9) {
         my_putstr("00");
         my_put_nbr(oct);
@@ -41,11 +43,11 @@ void print_ascii(int c)
 
 void octal(va_list arg)
 {
-    char *bin = hexa_binary(arg);
-    char *oct = prep_hex(bin);
-    int tab[4] = {1, 2, 4};
     int i = 0;
     int k = 0;
+    int tab[4] = {1, 2, 4};
+    char *bin = hexa_binary(arg);
+    char *oct = prep_hex(bin);
 
     oct[(my_strlen(bin) / 3) + 1] = '\0';
     for (int p = 0; bin[p] != '\0';) {
@@ -63,11 +65,11 @@ void octal(va_list arg)
 
 void pointer(va_list arg)
 {
+    int k = 0;
+    int i = 0;
+    int tab[4] = {1, 2, 4, 8};
     char *bin = pointer_binary(arg);
     char *hex = prep_hex(bin);
-    int tab[4] = {1, 2, 4, 8};
-    int i = 0;
-    int k = 0;
 
     hex[(my_strlen(bin) / 4) + 1] = '\0';
     for (int p = 0; bin[p] != '\0';) {
@@ -101,7 +103,6 @@ char *pointer_binary(va_list arg)
     for (int i = 0; src >= 1; ++i) {
         res = src % 2;
         src = src / 2;
-
         bin[i] = res + 48;
     }
     return (bin);

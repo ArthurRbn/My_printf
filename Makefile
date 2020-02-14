@@ -10,29 +10,26 @@ SRC	=	my_strlen.c	\
 		my_putstr.c	\
 		my_put_nbr.c	\
 		my_getnbr.c	\
+		my_revstr.c	\
+		my_printf.c	\
 		printf_flags.c	\
 		printf_flags2.c	\
 		printf_flags3.c	\
 		printf_flags4.c	\
-		my_revstr.c	\
-		my_printf.c
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	my_printf
-
-NAS	=	libmy.a
+NAME	=	libmy.a
 
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	ar rc $(NAS) $(OBJ)
-	rm -rf *.o
+	ar rc $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
 
 fclean:	clean
-	rm -f $(NAS)
+	rm -f $(NAME)
 
 re:	fclean all

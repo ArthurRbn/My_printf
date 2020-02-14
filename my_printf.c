@@ -6,17 +6,16 @@
 */
 #include <stdarg.h>
 #include <stdlib.h>
-#include "include/my.h"
 #include <stdio.h>
 #include <unistd.h>
+#include "include/my.h"
 
 int flags(int c)
 {
     int i = 0;
     char param[] = {'d', 'c', 's', 'b', 'u', 'X', 'x', '%', 'S', 'o', 'p'};
-    if (c == 105) {
+    if (c == 105)
         return (0);
-    }
     while (c != param[i]) {
         ++i;
     }
